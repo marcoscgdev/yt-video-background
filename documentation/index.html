@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>YouTube Video Background Documentation</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+		h2, h4 {
+			font-weight: 600;
+		}
+		h2 {
+			margin-bottom: 20px;
+		}
+		.card {
+			padding: 16px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container" style="margin-top: 56px;">
+			<div class="card"><center><h1>Documentation | v1.0<br><small>YouTube Video Background Documentation</small></h1>
+			<br>
+			<p>If you have any questions that are beyond the scope of this help file, please feel free to email via email <a href="mailto:marcoscgdev@gmail.com" target="_blank">marcoscgdev@gmail.com</a>.</p></center>
+		</div>
+		<br>
+<h2>Installation</h2>
+			<h4>Step 1. Include jquery (insert into your page's head tag)</h4>
+		<p>If your page already has jquery included then you can skip this step.</p>
+		<pre class="code language-html">
+			&lt;!-- Include jquery (required by this plugin) --&gt;
+			&lt;script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
+		</pre>
+		<h4>Step 2. Include the plugin javascript file</h4>
+		<p>It has to be <b>after</b> the jquery plugin.</p>
+		<pre class="code language-html">
+			&lt;!-- Change <i>path/to</i> with your custom js path --&gt;
+			&lt;script type="text/javascript" src="path/to/yt-video-background.min.js"&gt;&lt;/script&gt;
+		</pre>
+		<h4>Step 3. Include the plugin stylesheet file</h4>
+		<pre class="code language-html">
+			&lt;!-- Change <i>path/to</i> with your custom css path --&gt;
+			&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/yt-video-background.min.css&quot;&gt;
+		</pre>
+		<br>
+<h2>Configuration</h2>
+<h4>Step 1. Place an empty div where you want the background</h4>
+<pre class="code language-html">
+	&lt;div class=&quot;video-background&quot;&gt;&lt;/div&gt;
+</pre>
+<h4>Step 2. Configure the background</h4>
+<p>This plugin needs to be configured in order to use it. Configuration can be done by placing (and editing) the following code <b>after</b> the main javascript plugin insertion (see the step 2).<br><i>$('.video-background')</i> is a reference to the previous created div.</p>
+<pre class="code language-html">
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$('.video-background').youtubeBackground({
+			videoId: 'zofBinqC2F4', // Your desired YouTube video id
+			backgroundColor: '#212121', // Overlay background color
+			backgroundImage: 'https://i.ytimg.com/vi/ITpIv6Efz8Y/maxresdefault.jpg', // Background image for mobile devices because it does not support youtube video background
+			opacity: 0.6 // Video opacity. Set to 1 if you do not want opacity
+		});
+	&lt;/script&gt;
+</pre>
+<blockquote class="blockquote">See the demo page to clarify any queries you may have.</blockquote>
+<br>
+<h4>And... That's all!</h4>
+	<br><br>
+		</div>
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" charset="utf-8"></script>
+		<script src="js/jquery.syntaxhighlighter.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.SyntaxHighlighter.init();
+		</script>
+  </body>
+</html>
